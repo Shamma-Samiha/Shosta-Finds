@@ -10,7 +10,15 @@ A modern e-commerce platform featuring curated finds including trendy apparel, e
 - **Fast Development**: Vite-powered React frontend with hot module replacement
 - **RESTful Backend**: Django REST API for catalog, orders, users, and support
 
-## 📋 Prerequisites
+## �️ Website View
+
+![Home Page](asset/SF01.png)
+![Login Page](asset/SF04.png)
+![Register Page](asset/SF05.png)
+![Product View](asset/SF02.png)
+![Product View](asset/SF03.png)
+
+## �📋 Prerequisites
 
 Before you begin, ensure you have the following installed:
 
@@ -179,4 +187,4 @@ This project is open source and available under the MIT License.
 Shamma Samiha 
 ---
 
-**Happy Shopping! 🛍️**
+
