@@ -1,73 +1,183 @@
-# React + TypeScript + Vite
+# Shosta Finds 🛍️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern e-commerce platform featuring curated finds including trendy apparel, elegant decor, and green companions. Built with React + TypeScript frontend and Django backend.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Shopping Categories**: Browse products in Men, Women, Kids, Plants, and Home Decor sections
+- **User Authentication**: Login and Registration system
+- **Modern UI**: Dark-themed, responsive design built with Tailwind CSS
+- **Fast Development**: Vite-powered React frontend with hot module replacement
+- **RESTful Backend**: Django REST API for catalog, orders, users, and support
 
-## React Compiler
+## 📋 Prerequisites
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Before you begin, ensure you have the following installed:
 
-## Expanding the ESLint configuration
+- **Node.js** (v18 or higher) and **npm**
+- **Python** (v3.8 or higher) and **pip**
+- **Git**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Frontend Setup
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Navigate to the frontend directory:
+```bash
+cd frontend
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies:
+```bash
+npm install
 ```
+
+### Backend Setup
+
+1. Navigate to the backend directory:
+```bash
+cd backend
+```
+
+2. Create a virtual environment (recommended):
+```bash
+python -m venv venv
+```
+
+3. Activate the virtual environment:
+   - **Windows**:
+   ```bash
+   venv\Scripts\activate
+   ```
+   - **macOS/Linux**:
+   ```bash
+   source venv/bin/activate
+   ```
+
+4. Install dependencies:
+```bash
+pip install django
+```
+
+5. Run database migrations:
+```bash
+python manage.py migrate
+```
+
+6. (Optional) Create a superuser for admin access:
+```bash
+python manage.py createsuperuser
+```
+
+## 🏃 Running the Application
+
+### Frontend Development Server
+
+1. Navigate to the frontend directory:
+```bash
+cd frontend
+```
+
+2. Start the development server:
+```bash
+npm run dev
+```
+
+The frontend will be available at `http://localhost:5173/`
+
+### Backend Development Server
+
+1. Navigate to the backend directory:
+```bash
+cd backend
+```
+
+2. Start the Django development server:
+```bash
+python manage.py runserver
+```
+
+
+## 📁 Project Structure
+
+```
+Shosta_Finds/
+├── frontend/                 # React + TypeScript frontend
+│   ├── src/
+│   │   ├── components/      # Reusable components (Navbar, Footer)
+│   │   ├── pages/          # Page components (Home, Landing, Men, Women, etc.)
+│   │   ├── App.tsx         # Main app component
+│   │   └── main.tsx        # Application entry point
+│   ├── public/             # Static assets
+│   └── package.json        # Frontend dependencies
+│
+└── backend/                 # Django backend
+    ├── catalog/            # Product catalog app
+    ├── orders/             # Order management app
+    ├── users/              # User management app
+    ├── support/            # Customer support app
+    ├── core/               # Django project settings
+    └── manage.py           # Django management script
+```
+
+## 🎨 Available Routes
+
+- `/` - Landing page
+- `/home` - Home page
+- `/men` - Men's products
+- `/women` - Women's products
+- `/kids` - Kids' products
+- `/plants` - Plants section
+- `/home-decor` - Home decor products
+- `/contact` - Contact page
+- `/login` - User login
+- `/register` - User registration
+
+## 🛠️ Available Scripts
+
+### Frontend
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build
+
+### Backend
+
+- `python manage.py runserver` - Start Django development server
+- `python manage.py migrate` - Apply database migrations
+- `python manage.py makemigrations` - Create new migrations
+- `python manage.py createsuperuser` - Create admin user
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **React 19** - UI library
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **React Router** - Client-side routing
+- **Tailwind CSS** - Utility-first CSS framework
+
+### Backend
+- **Django 5.2** - Python web framework
+- **SQLite** - Database (development)
+
+## 📝 Development Notes
+
+- The frontend uses Vite for fast development with HMR (Hot Module Replacement)
+- The backend uses Django's built-in development server
+- Both servers can run simultaneously on different ports
+- Make sure to configure CORS settings in Django if connecting frontend to backend API
+
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## 👤 Author
+
+Shamma Samiha 
+---
+
+**Happy Shopping! 🛍️**
+
