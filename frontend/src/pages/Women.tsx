@@ -1,9 +1,5 @@
+import ProductGrid from '../components/ProductGrid';
+
 export default function Women() {
-  return (
-    <div className="p-10 text-center">
-      <h1 className="text-4xl md:text-5xl font-extrabold text-white">
-        Welcome to Women 🛍️
-      </h1>
-    </div>
-  );
+  return <ProductGrid category="women" title="Women's Collection 👗" />;
 }

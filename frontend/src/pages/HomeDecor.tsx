@@ -1,9 +1,5 @@
+import ProductGrid from '../components/ProductGrid';
+
 export default function HomeDecor() {
-  return (
-    <div className="p-10 text-center">
-      <h1 className="text-4xl md:text-5xl font-extrabold text-white">
-        Home Decor 🛍️
-      </h1>
-    </div>
-  );
+  return <ProductGrid category="home_decor" title="Home Decor ✨" />;
 }
